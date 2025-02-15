@@ -1,0 +1,32 @@
+<h1>{{name}}</h1>
+
+
+<dl>
+
+    <td>Nombre:</td>
+    <dd>    {{name}}</dd>
+    
+    <td>Edad:</td>
+    <dd>    {{edad}}</dd>
+
+    <td>Metodo:</td>
+    <dd>    {{getHeroDescription()}}</dd>
+
+    <td>Capitalizado:</td>
+    <dd>    {{capitalizedName}}</dd>
+
+
+</dl>
+
+<button *ngIf="edad !==28" 
+(click)="changeAge()" class="btn btn-primary mx-2" >Cambiar edad</button>
+
+
+
+<button *ngIf="edad===28 && name==='Sportakus'" 
+(click)="reset()" class="btn btn-primary mx-2">Reseteo</button>
+
+<button *ngIf="name !=='Sportakus'" 
+class="btn btn-primary mx-2" (click)="changeHero()">
+Cambiar nombre
+</button>
